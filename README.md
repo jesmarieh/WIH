@@ -1,5 +1,4 @@
-# READ ME
-UConn Senior Design Project.
+# UConn Senior Design Project 2021-2022
 
 Sponsor: CGI Inc.
 Project: #7 | Wearables in Healthcare (WIH)
