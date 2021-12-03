@@ -9,7 +9,7 @@ function App() {
   const [getMessage, setGetMessage] = useState({})
 
   useEffect(()=>{
-    axios.get('http://localhost:5000/flask/hello').then(response => {
+    axios.get('http://127.0.0.1:5000/').then(response => {
       console.log("SUCCESS", response)
       setGetMessage(response)
     }).catch(error => {
@@ -20,12 +20,12 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <Checkbox onChange={(e)=>e.target.checked}>React + Flask Tutorial</Checkbox>
+      <Checkbox onChange={(e)=>e.target.checked}>App started</Checkbox>
 
         <div>{getMessage.status === 200 ? 
-          <h3>{getMessage.data.message}</h3>
+          <h5>{getMessage.data}</h5>
           :
-          <h3>LOADING</h3>}</div>
+          <h5>LOADING</h5>}</div>
       </header>
     </div>
   );
