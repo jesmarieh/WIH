@@ -10,14 +10,14 @@ CORS(app)
 
 @app.route("/", methods=['GET'])
 def index():
-    req = requests.get('https://cat-fact.herokuapp.com/facts')
-    data = json.loads(req.content)
-    return render_template('index.html', data=data)
+    req = requests.get('https://health.gov/myhealthfinder/api/v3/myhealthfinder.json?age=10&sex=male')
+    #data = json.loads(req.content)
+    return req.json()["Result"]["Resources"]["You may also be interested in these health topics:"]["Resource"][0]#["MyHFCategory"]#["RelatedItems"]#["RelatedItems"]#render_template('index.html', data=data)
 
 
 
 
-#https://health.gov/myhealthfinder/api/v3/myhealthfinder.json?age=10&sex=male
+#https://cat-fact.herokuapp.com/facts
 
 #
 

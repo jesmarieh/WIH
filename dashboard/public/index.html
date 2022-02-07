@@ -1,43 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,
+    maximum-scale=1">
+    <title>Your Health</title>
+    <!--https://icons8.com/line-awesome-->
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <input type="checkbox" id="nav-toggle">
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div class="sidebar">
+        <div class="sidebar-brand">
+            <h2><span class="lab la-health"></span> <span>Your Health</span>
+            </h2>
+        </div>
+
+        <div class="sidebar-menu">
+            <ul>
+                <li>
+                    <a href="" class="active"><span class="las la-chart-bar"></span>
+                    <span>Dashboard</span></a>
+                </li>
+                <li>
+                    <a href=""><span class="las la-clipboard-list"></span>
+                    <span>My Plans</span></a>
+                </li>
+                <li>
+                    <a href=""><span class="las la-folder"></span>
+                    <span>My Data</span></a>
+                </li>
+                <li>
+                    <a href=""><span class="las la-stopwatch"></span>
+                    <span>Devices</span></a>
+                </li>
+                <li>
+                    <a href=""><span class="las la-clipboard-check"></span>
+                    <span>Tasks</span></a>
+                </li>
+                <li>
+                    <a href=""><span class="las la-user-circle"></span>
+                    <span>My Account</span></a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h2>
+                <label for="nav-toggle">
+                    <span class="las la-bars"></span>
+                </label>
+
+                Dashboard
+            </h2>
+            
+            <div class="search-wrapper">
+                <span class="las la-search"></span>
+                <input type="search" placeholder="Search here"/>
+            </div>
+
+            <div class="user-wrapper">
+                <img src="img/2.jpg" width="40px" height="40px" alt="">
+                <div>
+                    <h4> John Doe </h4>
+                    <small>Super admin</small> 
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="cards">
+                <div class="card-single">
+                    <div>
+                        <h1>74 bpm</h1>
+                        <span>Heart Rate</span>
+                    </div>
+                    <div>
+                        <span class="las la-heart">
+                    </div>
+                </div>
+                <div class="card-single">
+                    <div>
+                        <h1>2:15:00 hr</h1>
+                        <span>Exercise Records</span>
+                    </div>
+                    <div>
+                        <span class="las la-dumbbell">
+                    </div>
+                </div>
+                <div class="card-single">
+                    <div>
+                        <h1>145 lb</h1>
+                        <span>Weight</span>
+                    </div>
+                    <div>
+                        <span class="las la-weight">
+                    </div>
+                </div>
+                <div class="card-single">
+                    <div>
+                        <h1>8:22:00</h1>
+                        <span>Sleep</span>
+                    </div>
+                    <div>
+                        <span class="las la-bed">
+                    </div>
+                </div>
+            </div>
+
+            <div class="recent-grid">
+                <div class="projects">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Recent Updates</h3>
+
+                            
+                            <!--makes "See all" clickable in the form of a button-->  
+                            <!--aalso added an arrow figure to that button-->
+                            <button>See all <span class="las la-arrow-right">
+                            </span></button>
+                        </div>
+
+                        <div class="card-body">
+                            <div class="table-responsive">
+                            <!--by adding width="100%" we can see that
+                            it maximizes out the space of the appliaction by
+                            spreading out the schemas Project Title, Department,
+                            and status-->
+                                <table width="100%">
+                                    <thead>
+                                        <tr>
+                                            <td>Project Title</td>
+                                            <td>Department</td>
+                                            <td>Status</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>UI/UX Design</td>
+                                            <td>UI Team</td>
+                                            <td>
+                                                <span class="status purple"></span>
+                                                review
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Web development</td>
+                                            <td>Frontend</td>
+                                            <td>
+                                                <span class="status pink"></span>
+                                                in progress
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ushop app</td>
+                                            <td>Mobile Team</td>
+                                            <td>
+                                                <span class="status orange"></span>
+                                                pending
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>UI/UX Design</td>
+                                            <td>UI Team</td>
+                                            <td>
+                                                <span class="status purple"></span>
+                                                review
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Web development</td>
+                                            <td>Frontend</td>
+                                            <td>
+                                                <span class="status pink"></span>
+                                                in progress
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ushop app</td>
+                                            <td>Mobile Team</td>
+                                            <td>
+                                                <span class="status orange"></span>
+                                                pending
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>UI/UX Design</td>
+                                            <td>UI Team</td>
+                                            <td>
+                                                <span class="status purple"></span>
+                                                review
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Web development</td>
+                                            <td>Frontend</td>
+                                            <td>
+                                                <span class="status pink"></span>
+                                                in progress
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ushop app</td>
+                                            <td>Mobile Team</td>
+                                            <td>
+                                                <span class="status orange"></span>
+                                                pending
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="physicians">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Your Physicians</h3>
+
+                            <button>See all <span class="las la-arrow-right">
+                            </span></button>
+                        </div>
+
+                        <div class="card-body">
+                            <div class="physicians">
+                                <div class="info">
+                                    <img src="img/2.jpg" width="40px"
+                                    height="40px" alt="">
+                                    <div>
+                                        <h4>Dr. Ashely Tang</h4>
+                                        <small>General Physician</small>
+                                    </div>
+                                </div>
+                                <div class="contact">
+                                    <span class="las la-user-circle"></span>
+                                    <span class="las la-comment"></span>
+                                    <span class="las la-phone"></span>
+
+                                </div>
+                            </div>
+                            <div class="physicians">
+                                <div class="info">
+                                    <img src="img/2.jpg" width="40px"
+                                    height="40px" alt="">
+                                    <div>
+                                        <h4>Dr. Ashley Samuel</h4>
+                                        <small>Cancer Specialist</small>
+                                    </div>
+                                </div>
+                                <div class="contact">
+                                    <span class="las la-user-circle"></span>
+                                    <span class="las la-comment"></span>
+                                    <span class="las la-phone"></span>
+
+                                </div>
+                            </div>
+
+                            <div class="physicians">
+                                <div class="info">
+                                    <img src="img/2.jpg" width="40px"
+                                    height="40px" alt="">
+                                    <div>
+                                        <h4>Dr. Ashleigh Madison Grey</h4>
+                                        <small>Work Nurse</small>
+                                    </div>
+                                </div>
+                                <div class="contact">
+                                    <span class="las la-user-circle"></span>
+                                    <span class="las la-comment"></span>
+                                    <span class="las la-phone"></span>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </main>
+    </div>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+    <script src="/bundle.js"></script>
+</body>
 </html>
