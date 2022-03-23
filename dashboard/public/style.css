@@ -291,20 +291,24 @@ tr td:last-child {
 }
 
 /*corresponds to the status color classes in index.html*/
-.status.purple {
-    background:rebeccapurple;
+.status.red {
+    background:red;
 }
 
-/*corresponds to the status color classes in index.html*/
-.status.pink {
-    background: deeppink;
-}
 
 /*corresponds to the status color classes in index.html*/
 .status.orange {
-    background:orangered;
+    background:orange;
 }
 
+/*corresponds to the status color classes in index.html*/
+.status.yellow {
+    background: yellow;
+}
+
+.status.green {
+    background: rgb(71, 158, 71);
+}
 .table-responsive {
     width: 100%
     overflow-x auto;
